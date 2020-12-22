@@ -11,8 +11,8 @@ const var_dump = require('var_dump');
 const { stat } = require('fs');
 var con= mysql.createConnection({
   host: 'localhost',
-  user:'root',
-  password: 'root',
+  user:'xxx',
+  password: 'xxx',
   database: 'assignment_mobile'
 });
 const query=util.promisify(con.query).bind(con);
@@ -21,7 +21,7 @@ con.connect(function(err){
   console.log("Connected!");
 });
 
-const secretKey="lifebow";
+const secretKey="xxxxxxx";
 let generateToken = (name, secretSignature, tokenLife) => {
   return new Promise((resolve, reject) => {
     const userData = {
